@@ -38,7 +38,7 @@ $("button").on("click", function () {
             // Make a paragraph tag with jQuery and store it in a variable named p.
             var p = $('<p>');
             // Set the inner text of the paragraph to the rating of the image in results[i].
-            p.text(results[i].rating);
+            var gRating = p.text(results[i].rating);
             // Make an image tag with jQuery and store it in a variable named artistImage.
             var artistImage = $('<img>');
             // Set the image's src to results[i]'s fixed_height.url.
@@ -48,17 +48,16 @@ $("button").on("click", function () {
             artistImage.attr('data-animate', results[i].images.fixed_height.url);
             artistImage.attr('data-state', "still");
             
-            // Append the p variable to the artistDiv variable.
-            artistDiv.append(p);
+            
             // Append the artistImage variable to the artistDiv variable.
-            // artistDiv.append(artistImage);
             artistImage.appendTo(artistDiv);
-            // Prepend the artistDiv variable to the element with an id of gifs-appear-here.
-            $('#gifs-appear-here').append(artistDiv);
+            // Append the p variable to the artistDiv variable.
+            artistDiv.append(gRating);
+            // prepend the artistDiv variable to the element with an id of gifs-appear-here.
+            $('#gifs-appear-here').prepend(artistDiv);
 
 
             // artistImage.on('click', this.checkAnimation.bind(this));
-
         }
 
         $(".gif").on("click", function () {
