@@ -8,7 +8,7 @@ for (let i = 0; i < artistArray.length; i++) {
     buttonChoice.attr("data-musician", artistArray[i]);
     buttonChoice.text(artistArray[i]);
     $("#multipleButtons").append(buttonChoice);
-    // buttonChoice.on('click', this.checkAnswers.bind(this));
+    // console.log(this);
 };
 
 $("button").on("click", function () {
@@ -28,9 +28,6 @@ $("button").on("click", function () {
         // Step 2: since the image information is inside of the data key,
         // make a variable named results and set it equal to response.data
         var results = response.data;
-        // =============== put step 2 in between these dashes ==================
-
-        // ========================
 
         for (var i = 0; i < results.length; i++) {
             console.log(results[i]);
@@ -45,19 +42,50 @@ $("button").on("click", function () {
             // Make an image tag with jQuery and store it in a variable named artistImage.
             var artistImage = $('<img>');
             // Set the image's src to results[i]'s fixed_height.url.
-            artistImage.attr('src', results[i].images.fixed_height.url);
+            artistImage.addClass("gif");
+            artistImage.attr('src', results[i].images.fixed_height_still.url);
+            artistImage.attr('data-still', results[i].images.fixed_height_still.url);
+            artistImage.attr('data-animate', results[i].images.fixed_height.url);
+            artistImage.attr('data-state', "still");
+            
             // Append the p variable to the artistDiv variable.
             artistDiv.append(p);
             // Append the artistImage variable to the artistDiv variable.
             // artistDiv.append(artistImage);
             artistImage.appendTo(artistDiv);
             // Prepend the artistDiv variable to the element with an id of gifs-appear-here.
-            $('#gifs-appear-here').prepend(artistDiv);
-            // artistDiv.prependTo($('#gifs-appear-here'));
-            // ============= put step 3 in between these dashes ======================
+            $('#gifs-appear-here').append(artistDiv);
 
-            // ==================================
+
+            // artistImage.on('click', this.checkAnimation.bind(this));
+
         }
 
+        $(".gif").on("click", function () {
+            //data-state
+            console.log(this);
+            var state = $(this).attr("data-state");
+        
+            console.log(state);
+        
+            //if the variable state is equal to 'still'
+            if(state === 'still'){
+              // update this image to it's data-animate
+              var animate = $(this).attr("data-animate");
+              $(this).attr("src", animate);
+              // update the data-state attribute to 'animate'
+              $(this).attr("data-state", 'animate');
+            }
+            // If state is equal to 'animate'
+            if(state === 'animate'){
+        
+              $(this).attr("src", $(this).attr("data-still"));
+              $(this).attr("data-state", 'still');
+            }
+        });
+        console.log(this);
     });
 });
+
+// function checkAnimation() {
+
