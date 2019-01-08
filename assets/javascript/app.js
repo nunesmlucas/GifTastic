@@ -13,7 +13,8 @@ function run() {
         // console.log(this);
     };
 
-    $("button").on("click", function () {
+    $("[data-musician]").on("click", function () {
+        console.log("In Button function");
         var artist = $(this).attr("data-musician");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             artist + "&api_key=0PnKs137lj6tKJnxrZEJjxTYQUrwztWq&limit=10";
@@ -40,7 +41,7 @@ function run() {
                 // Make a paragraph tag with jQuery and store it in a variable named p.
                 var p = $('<p>');
                 // Set the inner text of the paragraph to the rating of the image in results[i].
-                var gRating = p.text(results[i].rating);
+                var gRating = p.text(results[i].rating.toUpperCase());
                 // Make an image tag with jQuery and store it in a variable named artistImage.
                 var artistImage = $('<img>');
                 // Set the image's src to results[i]'s fixed_height.url.
@@ -84,8 +85,6 @@ function run() {
                     $(this).attr("data-state", 'still');
                 }
             });
-
-
             console.log(this);
         });
 
@@ -106,7 +105,7 @@ $("#add-artist").on("click", function (event) {
     run();
 
 });
+$("#clear-button").on("click", function () {
+    $("#gifs-appear-here").empty();
+});
 run();
-
-
-
