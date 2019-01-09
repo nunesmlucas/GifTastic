@@ -38,6 +38,13 @@ function run() {
                 // Step 3: uncomment the for loop above and the closing curly bracket below.
                 // Make a div with jQuery and store it in a variable named artistDiv.
                 var artistDiv = $('<div>');
+                //creating a link to download Gif
+                var downloadLink = $('<a>');
+                //grabbing by the url location of the file and the title to save as.
+                downloadLink.attr("href", results[i].images.original.url, "download");
+                // downloadLink.attr("download");
+
+                downloadLink.text("Download");
                 // Make a paragraph tag with jQuery and store it in a variable named p.
                 var p = $('<p>');
                 // Set the inner text of the paragraph to the rating of the image in results[i].
@@ -56,6 +63,7 @@ function run() {
                 artistImage.appendTo(artistDiv);
                 // Append the p variable to the artistDiv variable.
                 artistDiv.append(gRating);
+                artistDiv.append(downloadLink);
                 // prepend the artistDiv variable to the element with an id of gifs-appear-here.
                 $('#gifs-appear-here').prepend(artistDiv);
 
