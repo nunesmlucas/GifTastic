@@ -58,11 +58,11 @@ function run() {
                 // Make a paragraph tag with jQuery and store it in a variable named p.
                 var p = $('<p>');
                 // Set the inner text of the paragraph to the rating of the image in results[i].
-                var gRating = p.text(results[i].rating.toUpperCase());
+                var gRating = p.text("Rating: " + results[i].rating.toUpperCase());
                 // Make an image tag with jQuery and store it in a variable named artistImage.
                 var artistImage = $('<img>');
                 // Set the image's src to results[i]'s fixed_height.url.
-                artistImage.addClass("gif");
+                artistImage.addClass("gif img-fluid");
                 artistImage.attr('src', results[i].images.fixed_height_still.url);
                 artistImage.attr('data-still', results[i].images.fixed_height_still.url);
                 artistImage.attr('data-animate', results[i].images.fixed_height.url);
@@ -73,7 +73,7 @@ function run() {
                 artistImage.appendTo(artistDiv);
                 // Append the p variable to the artistDiv variable.
                 artistDiv.append(gRating);
-                artistDiv.append(downloadLink);
+                gRating.append(downloadLink);
                 // prepend the artistDiv variable to the element with an id of gifs-appear-here.
                 $('#gifs-appear-here').prepend(artistDiv);
             }
