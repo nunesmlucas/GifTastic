@@ -60,6 +60,9 @@ body{
 }
 
 
-/* .gifMove{
+#gifMove{
+    background-color: slategrey;
+    /* padding: 10px; */
     float: right;
-} */
+
+}

@@ -51,7 +51,7 @@ function run() {
                 // downloadLink.attr("download");
 
 
-                artistDiv.addClass("col col-md-4");
+                artistDiv.addClass("col col-lg-6");
                 artistDiv.attr("id", "gifMove");
 
                 downloadLink.text("Download");
@@ -113,7 +113,7 @@ $("#add-artist").on("click", function (event) {
 
     // Adding movie from the textbox to our array
     artistArray.push(artist);
-    $("#add-artist").val("");
+    $("#artist-input").val("");
 
     // Calling renderButtons which handles the processing of our movie array
     console.log(artistArray);
