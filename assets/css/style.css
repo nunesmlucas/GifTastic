@@ -19,7 +19,9 @@ body{
 	border-color: #28D43C;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1F62F2', endColorstr='#28D43C', GradientType=0);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    opacity: .9;
+    
 }
 .btn-greennGradient:hover,
 .btn-greennGradient:focus,
@@ -42,4 +44,11 @@ body{
     background-color: #1f7aa3;
     padding: 5px;
     border-radius: 5px;
+    opacity: 1.0;
+}
+#button-div{
+    margin-top: 20px;
+}
+#music-button{
+    margin: 3px;
 }

@@ -12,10 +12,9 @@ function run() {
 // need to ask why they're not coming up as btn-rounded ---------------
         // buttonChoice.addClass("btn btn-outline-primary btn-rounded waves-effect");
         buttonChoice.addClass("btn btn-greennGradient");
-
-
         buttonChoice.attr("data-musician", artistArray[i]);
         buttonChoice.text(artistArray[i]);
+        buttonChoice.attr("id", "music-button");
         $("#multipleButtons").append(buttonChoice);
         // console.log(this);
     };
