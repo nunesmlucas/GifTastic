@@ -7,6 +7,10 @@ function run() {
 
     for (let i = 0; i < artistArray.length; i++) {
         var buttonChoice = $("<button>");
+
+        // buttonChoice.attr("type", "button");
+        buttonChoice.addClass("btn btn-outline-primary btn-rounded waves-effect");
+
         buttonChoice.attr("data-musician", artistArray[i]);
         buttonChoice.text(artistArray[i]);
         $("#multipleButtons").append(buttonChoice);
@@ -106,6 +110,7 @@ $("#add-artist").on("click", function (event) {
 
     // Adding movie from the textbox to our array
     artistArray.push(artist);
+    $("#add-artist").val("");
 
     // Calling renderButtons which handles the processing of our movie array
     console.log(artistArray);
