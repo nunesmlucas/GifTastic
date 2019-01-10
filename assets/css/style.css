@@ -47,8 +47,19 @@ body{
     opacity: 1.0;
 }
 #button-div{
-    margin-top: 20px;
+    padding: 20px;
+    background-color: black;
+    /* opacity: .5; */
 }
 #music-button{
     margin: 3px;
+    /* opacity: .8; */
 }
+#gifs-appear-here{
+    margin-top: 20px;
+}
+
+
+/* .gifMove{
+    float: right;
+} */

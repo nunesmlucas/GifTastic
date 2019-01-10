@@ -50,6 +50,10 @@ function run() {
                 downloadLink.attr("href", results[i].images.original.url, "download");
                 // downloadLink.attr("download");
 
+
+                artistDiv.addClass("col col-md-4");
+                artistDiv.attr("id", "gifMove");
+
                 downloadLink.text("Download");
                 // Make a paragraph tag with jQuery and store it in a variable named p.
                 var p = $('<p>');
@@ -72,9 +76,6 @@ function run() {
                 artistDiv.append(downloadLink);
                 // prepend the artistDiv variable to the element with an id of gifs-appear-here.
                 $('#gifs-appear-here').prepend(artistDiv);
-
-
-                // artistImage.on('click', this.checkAnimation.bind(this));
             }
 
             $(".gif").on("click", function () {
