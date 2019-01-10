@@ -11,20 +11,32 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <title>Artist Buttons</title>
 </head>
 
 <body>
     <div class="container">
-
+        <div class="row">
+            <div class="col">
+                
+            </div>
+            <div id="gifTitle" class="col-6 text-center">
+                <h1>GIF-Tastic Musician-astic</h1>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
         <div id="multipleButtons"></div>
         <form id="artist-form">
-            <span id="todo-item">Add an artist! <input type="text" id="artist-input" type="submit"></span>
+            <h3><span id="todo-item">Add an artist!</h3><input type="text" id="artist-input" type="submit"></span>
             <br>
 
             <!-- Button triggers new movie to be added -->
-            <input id="add-artist" type="submit" value="Add an artist!">
-            <button id="clear-button" type="button">CLEAR!</button>
+            <input id="add-artist" type="submit" class="btn btn-greennGradient" value="Add an artist!">
+            <button id="clear-button" type="button" class="btn btn-greennGradient">CLEAR!</button>
         </form>
         <div id="gifs-appear-here">
         </div>

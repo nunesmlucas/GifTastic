@@ -9,7 +9,10 @@ function run() {
         var buttonChoice = $("<button>");
 
         // buttonChoice.attr("type", "button");
-        buttonChoice.addClass("btn btn-outline-primary btn-rounded waves-effect");
+// need to ask why they're not coming up as btn-rounded ---------------
+        // buttonChoice.addClass("btn btn-outline-primary btn-rounded waves-effect");
+        buttonChoice.addClass("btn btn-greennGradient");
+
 
         buttonChoice.attr("data-musician", artistArray[i]);
         buttonChoice.text(artistArray[i]);

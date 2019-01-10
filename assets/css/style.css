@@ -1,0 +1,45 @@
+body{
+    background-image: url("https://stmed.net/sites/default/files/musician-wallpapers-30495-5882699.jpg");
+    /* background-image: url("GifTastic/assets/images/test.jpg"); */
+    background-attachment: fixed;
+        background-size: 100% auto;
+        height: auto;
+}
+.btn-greennGradient {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #28D43C;
+	*background-color: #28D43C;
+	background-image: -moz-linear-gradient(top, #1F62F2, #28D43C);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1F62F2), to(#28D43C));
+	background-image: -webkit-linear-gradient(top, #1F62F2, #28D43C);
+	background-image: -o-linear-gradient(top, #1F62F2, #28D43C);
+	background-image: linear-gradient(to bottom, #1F62F2, #28D43C);
+	background-repeat: repeat-x;
+	border-color: #28D43C;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1F62F2', endColorstr='#28D43C', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-greennGradient:hover,
+.btn-greennGradient:focus,
+.btn-greennGradient:active,
+.btn-greennGradient.active,
+.btn-greennGradient.disabled,
+.btn-greennGradient[disabled] {
+	color: #FFFFFF;
+	background-color: #28D43C;
+	*background-color: #003bb3;
+}
+#todo-item{
+    color: white;
+    background-color: #1f7aa3;
+    padding: 5px;
+    border-radius: 5px;
+}
+#gifTitle{
+    color: white;
+    background-color: #1f7aa3;
+    padding: 5px;
+    border-radius: 5px;
+}
