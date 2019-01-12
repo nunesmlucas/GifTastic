@@ -60,14 +60,16 @@ body{
     background-color: rgba(0,0,0,.7);
     /* opacity: .5; */
 }
+#button-field{
+    margin-bottom: 10px;
+}
 #music-button{
     margin: 3px;
     /* opacity: .8; */
 }
 #gifs-appear-here{
-    /* max-width: 80%; */
+    margin-top: 10px;
 }
-
 
 #gifMove{
     background-color: rgb(112, 128, 144, .85);
@@ -96,4 +98,3 @@ a:link{
 a:link{
     text-decoration: underline;
 }
-
